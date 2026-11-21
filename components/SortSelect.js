@@ -4,7 +4,7 @@ export default function SortSelect({ options, value, onChange }) {
       <select
         value={value}
         onChange={(e) => onChange(e.target.value)}
-        aria-label="Sort products by price"
+        aria-label="Sort products"
         className="w-full appearance-none rounded-full border border-zinc-300 bg-white py-2 pl-5 pr-11 text-sm font-semibold text-zinc-700 hover:border-indigo-600 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo-600 focus-visible:ring-offset-2 sm:w-52"
       >
         {options.map((o) => (

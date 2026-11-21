@@ -14,7 +14,23 @@ const SORT_OPTIONS = [
   { value: "featured", label: "Featured" },
   { value: "price-asc", label: "Price: Low to high" },
   { value: "price-desc", label: "Price: High to low" },
+  { value: "rating", label: "Customer rating" },
+  { value: "reviews", label: "Most reviewed" },
+  { value: "discount", label: "Biggest discount" },
+  { value: "name-asc", label: "Name: A to Z" },
 ];
+
+const discount = (p) => (p.originalPrice ? (p.originalPrice - p.price) / p.originalPrice : 0);
+
+// "featured" has no comparator, so products keep their original order
+const SORTERS = {
+  "price-asc": (a, b) => a.price - b.price,
+  "price-desc": (a, b) => b.price - a.price,
+  rating: (a, b) => b.rating - a.rating || b.reviews - a.reviews,
+  reviews: (a, b) => b.reviews - a.reviews,
+  discount: (a, b) => discount(b) - discount(a),
+  "name-asc": (a, b) => a.name.localeCompare(b.name),
+};
 
 export default function Shop() {
   const [selectedCategory, setSelectedCategory] = useState("All");
@@ -29,8 +45,8 @@ export default function Shop() {
         (selectedCategory === "All" || p.category === selectedCategory) &&
         p.name.toLowerCase().includes(q)
     );
-    if (sortOrder === "price-asc") result.sort((a, b) => a.price - b.price);
-    else if (sortOrder === "price-desc") result.sort((a, b) => b.price - a.price);
+    const sorter = SORTERS[sortOrder];
+    if (sorter) result.sort(sorter);
     return result;
   }, [selectedCategory, sortOrder, query]);
 
