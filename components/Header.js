@@ -24,8 +24,8 @@ export default function Header({ query = "", onQueryChange }) {
   return (
     <header className="sticky top-0 z-50 border-b border-zinc-200 bg-white shadow-sm">
       <div className="mx-auto flex h-16 max-w-7xl items-center gap-4 px-4 sm:px-6 lg:px-8">
-        <Link href="/" className="text-2xl font-extrabold tracking-tight text-zinc-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo-600 rounded" aria-label="DemoKart home">
-          Demo<span className="text-indigo-600">Kart</span>
+        <Link href="/" className="text-2xl font-extrabold tracking-tight text-zinc-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo-600 rounded" aria-label="PeguKart home">
+          Pegu<span className="text-indigo-600">Kart</span>
         </Link>
         {hasSearch ? <div className="relative mx-auto hidden w-full max-w-xl md:block">{searchIcon}{input}</div> : <div className="mx-auto" />}
         <div className="ml-auto flex items-center gap-1">

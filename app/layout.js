@@ -5,8 +5,8 @@ import { CartProvider } from "@/context/CartContext";
 const inter = Inter({ variable: "--font-inter", subsets: ["latin"] });
 
 export const metadata = {
-  title: "DemoKart – Electronics, Fashion, Home & Books at great prices",
-  description: "Shop top-rated electronics, fashion, home essentials and books at DemoKart. Great deals, easy returns and fast delivery across India.",
+  title: "PeguKart – Electronics, Fashion, Home & Books at great prices",
+  description: "Shop top-rated electronics, fashion, home essentials and books at PeguKart. Great deals, easy returns and fast delivery across India.",
 };
 
 export default function RootLayout({ children }) {

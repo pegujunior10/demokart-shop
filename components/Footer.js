@@ -1,7 +1,7 @@
 const cols = {
   Shop: ["Electronics", "Fashion", "Home", "Books"],
   Support: ["Help centre", "Track order", "Returns", "Contact us"],
-  Company: ["About DemoKart", "Careers", "Press", "Privacy policy"],
+  Company: ["About PeguKart", "Careers", "Press", "Privacy policy"],
 };
 
 export default function Footer() {
@@ -9,7 +9,7 @@ export default function Footer() {
     <footer className="mt-20 border-t border-zinc-200 bg-white">
       <div className="mx-auto grid max-w-7xl gap-10 px-4 py-12 sm:px-6 md:grid-cols-4 lg:px-8">
         <div>
-          <p className="text-2xl font-extrabold tracking-tight text-zinc-900">Demo<span className="text-indigo-600">Kart</span></p>
+          <p className="text-2xl font-extrabold tracking-tight text-zinc-900">Pegu<span className="text-indigo-600">Kart</span></p>
           <p className="mt-3 max-w-xs text-sm text-zinc-600">Quality products, honest prices, delivered to your door.</p>
         </div>
         {Object.entries(cols).map(([title, links]) => (
@@ -23,7 +23,7 @@ export default function Footer() {
           </nav>
         ))}
       </div>
-      <div className="border-t border-zinc-100 py-5 text-center text-sm text-zinc-500">© 2026 DemoKart. All rights reserved.</div>
+      <div className="border-t border-zinc-100 py-5 text-center text-sm text-zinc-500">© 2026 PeguKart. All rights reserved.</div>
     </footer>
   );
 }
