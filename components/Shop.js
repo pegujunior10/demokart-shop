@@ -11,7 +11,7 @@ import Footer from "./Footer";
 // Easy-to-change constants
 const CATEGORIES = ["All", "Electronics", "Fashion", "Home", "Books"];
 const SORT_OPTIONS = [
-  { value: "featured", label: "Featured" },
+  { value: "featured", label: "Sort" },
   { value: "price-asc", label: "Price: Low to high" },
   { value: "price-desc", label: "Price: High to low" },
   { value: "rating", label: "Customer rating" },
